@@ -3,9 +3,9 @@
 PyRoutinecheck - Toolkit for pythonized system checks
 
 Requirements:
-*Debian based linux distribution
-*Python 2.7
-*python-virtualenv
+* Debian based linux distribution
+* Python 2.7
+* python-virtualenv
 
 # Installation - Python Module
 
