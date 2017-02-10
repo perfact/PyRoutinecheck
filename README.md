@@ -10,4 +10,6 @@ PyRoutinecheck - Toolkit for pythonized system checks
 
 2. Activate virtualenv, install requirements from repository into the virtualenv using pip
 
+3. Install pyroutinecheck module into virtualenv using setup.py
+
 **WIP**
