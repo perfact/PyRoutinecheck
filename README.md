@@ -16,15 +16,15 @@ root@ubuntu:/opt/venv/pyroutinecheck# virtualenv .
 2. Activate virtualenv, install requirements from repository into the virtualenv using pip
 
 root@ubuntu:/opt/venv/pyroutinecheck# . ./bin/activate
-(pyroutinecheck) root@ubuntu:/opt/venv/pyroutinecheck# pip install -r <PATH TO REPOSITORY>/requirements.txt
+(pyroutinecheck) root@ubuntu:/opt/venv/pyroutinecheck# pip install -r <PATH TO REPOSITORY/>/requirements.txt
 
 3. Install pyroutinecheck module into virtualenv using setup.py
 
-(pyroutinecheck) root@ubuntu:/opt/venv/pyroutinecheck# python <PATH TO REPOSITORY>/setup.py
+(pyroutinecheck) root@ubuntu:/opt/venv/pyroutinecheck# python <PATH TO REPOSITORY/>/setup.py
 
 4. Test call for pyroutinecheck:
 
-(pyroutinecheck) root@ubuntu:/opt/venv/pyroutinecheck# pyroutinecheck -d -c <PATH TO REPOSITORY>/config/config.py
+(pyroutinecheck) root@ubuntu:/opt/venv/pyroutinecheck# pyroutinecheck -d -c <PATH TO REPOSITORY/>/config/config.py
 
 
 **Guide to make this a debian package for simpler instllation will follow soon!**
