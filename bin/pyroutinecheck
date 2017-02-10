@@ -7,8 +7,10 @@ import argparse
 import os
 
 # CUSTOM
-from lib.routinecheck import Routinecheck
-from lib.utils import *
+# from lib.routinecheck import Routinecheck
+# from lib.utils import *
+from pyroutinecheck.routinecheck import Routinecheck
+from pyroutinecheck.utils import *
 
 '''
 Main module of PyRoutinecheck
