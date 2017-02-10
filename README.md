@@ -7,7 +7,9 @@ Requirements:
 - Python 2.7
 - python-virtualenv
 
-# Installation - Python Module - ROOT PERMISSION REQUIRED
+# Installation - Python Module
+
+ROOT PERMISSION REQUIRED
 
 Create a new python virtualenv, e.g. in /opt/venvs/pyroutinecheck
 
