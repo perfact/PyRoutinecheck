@@ -1,0 +1,66 @@
+#!/opt/perfact/service_tools/pyroutinecheck/env/bin/python
+# -*- coding: utf-8 -*-
+
+# BUILTINS
+import sys
+import argparse
+import os
+
+# CUSTOM
+from lib.routinecheck import Routinecheck
+from lib.utils import *
+
+'''
+Main module of PyRoutinecheck
+
+This file must be executable and is called from virtualenv-
+python environment which should be provided with this package
+'''
+
+def main():
+
+    '''
+    Main function of PyRoutinecheck
+    Checks wether user has root permissions which are needed
+    Utilizes argparse module to provide parameters
+    Call main.py with -h or --help for reference
+    '''
+
+    # check if user is root, exit if not
+    if not os.geteuid() == 0:
+        exit('Root permission is required to run routinecheck! Exiting...')
+
+    p = argparse.ArgumentParser(description='PyRoutinecheck - StartScript')
+
+    p.add_argument('--mail', '-m', action = 'store_true',
+                   help = 'Deactivate interactive mode, only send mail',
+                   default = False
+    )
+
+    p.add_argument('--configpath', '-c', type = str,
+                   help = 'Path to config file',
+                   default = '/etc/perfact/pyroutinecheck/config.py'
+    )
+
+    p.add_argument('--dryrun', '-d', action = 'store_true',
+                   help = 'Run in dryrun-mode for testing',
+                   default = False
+    )
+
+    args = p.parse_args()
+
+    R = Routinecheck(
+        config_path = args.configpath
+    )
+
+    if args.mail:
+        R.write_mail()
+    elif args.dryrun:
+        R.dryrun()
+    else:
+        R.run()
+
+if __name__ == '__main__':
+
+    # run main function
+    Routinecheck = main()
